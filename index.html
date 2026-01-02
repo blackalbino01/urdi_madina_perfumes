@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Perfumes - Premium Fragrances</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h2>Luxury Perfumes</h2>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Discover Your Perfect Scent</h1>
+                <p>Luxury fragrances crafted with the finest ingredients from around the world</p>
+                <div class="hero-buttons">
+                    <a href="#products" class="btn btn-primary">Shop Now</a>
+                    <a href="#" onclick="bookConsultation()" class="btn btn-secondary">Book Consultation</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2>About Our Story</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>For over a decade, we've been crafting exceptional fragrances that capture emotions and memories. Our passion for perfumery drives us to source the finest ingredients and create unique blends that tell your story.</p>
+                        <p>From classic elegance to modern sophistication, our collection offers something special for every personality and occasion.</p>
+                    </div>
+                    <div class="about-features">
+                        <div class="feature">
+                            <h3>Premium Quality</h3>
+                            <p>Only the finest natural and synthetic ingredients</p>
+                        </div>
+                        <div class="feature">
+                            <h3>Expert Craftsmanship</h3>
+                            <p>Artisanal approach to fragrance creation</p>
+                        </div>
+                        <div class="feature">
+                            <h3>Personal Service</h3>
+                            <p>Customized recommendations for every customer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="products">
+            <div class="container">
+                <h2>Our Collection</h2>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/perfume1.jpg" alt="Classic Elegance" />
+                        </div>
+                        <h3>Classic Elegance</h3>
+                        <p>A timeless blend of rose and sandalwood</p>
+                        <div class="price">$89</div>
+                        <button onclick="bookConsultation('Classic Elegance')" class="btn btn-primary">Book Now</button>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/perfume2.jpg" alt="Modern Muse" />
+                        </div>
+                        <h3>Modern Muse</h3>
+                        <p>Contemporary fragrance with citrus and vanilla</p>
+                        <div class="price">$95</div>
+                        <button onclick="bookConsultation('Modern Muse')" class="btn btn-primary">Book Now</button>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/perfume3.jpg" alt="Midnight Mystery" />
+                        </div>
+                        <h3>Midnight Mystery</h3>
+                        <p>Sultry evening scent with amber and musk</p>
+                        <div class="price">$110</div>
+                        <button onclick="bookConsultation('Midnight Mystery')" class="btn btn-primary">Book Now</button>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/perfume4.jpg" alt="Fresh Breeze" />
+                        </div>
+                        <h3>Fresh Breeze</h3>
+                        <p>Light and airy with ocean and green notes</p>
+                        <div class="price">$75</div>
+                        <button onclick="bookConsultation('Fresh Breeze')" class="btn btn-primary">Book Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services">
+            <div class="container">
+                <h2>Our Services</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <h3>Personal Consultation</h3>
+                        <p>One-on-one fragrance consultation to find your perfect scent</p>
+                        <button onclick="bookConsultation('Personal Consultation')" class="btn btn-outline">Book Consultation</button>
+                    </div>
+                    
+                    <div class="service-card">
+                        <h3>Custom Blending</h3>
+                        <p>Create a unique fragrance tailored specifically for you</p>
+                        <button onclick="bookConsultation('Custom Blending')" class="btn btn-outline">Learn More</button>
+                    </div>
+                    
+                    <div class="service-card">
+                        <h3>Gift Wrapping</h3>
+                        <p>Beautiful presentation for special occasions and gifts</p>
+                        <button onclick="bookConsultation('Gift Wrapping')" class="btn btn-outline">Inquire</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Get In Touch</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Visit Our Store</h3>
+                        <p>123 Fragrance Street<br>
+                        Luxury District, City 12345<br>
+                        Phone: (555) 123-4567<br>
+                        Email: info@luxuryperfumes.com</p>
+                        
+                        <h3>Business Hours</h3>
+                        <p>Monday - Saturday: 10:00 AM - 8:00 PM<br>
+                        Sunday: 12:00 PM - 6:00 PM</p>
+                        
+                        <div class="whatsapp-cta">
+                            <button onclick="bookConsultation()" class="btn btn-whatsapp">
+                                📱 Book via WhatsApp
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form">
+                        <h3>Send us a Message</h3>
+                        <form id="contactForm">
+                            <input type="text" placeholder="Your Name" required>
+                            <input type="email" placeholder="Your Email" required>
+                            <input type="tel" placeholder="Your Phone">
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Luxury Perfumes. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" onclick="bookConsultation()">WhatsApp</a>
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
