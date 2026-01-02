@@ -1,7 +1,6 @@
-# Luxury Perfumes Website
+# URDI MADINA
 
-A modern, responsive business website for a luxury perfume company with WhatsApp booking integration.
-
+A Story Told in Scents
 ## Features
 
 - **Responsive Design**: Works perfectly on all devices (desktop, tablet, mobile)
@@ -107,3 +106,4 @@ The website is built with modern web standards and includes:
 - SEO optimization
 
 Remember to replace placeholder content and images with your actual business information before going live!
+
