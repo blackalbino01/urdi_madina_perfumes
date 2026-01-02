@@ -4,8 +4,9 @@ This folder should contain the following images for your perfume website:
 
 ## Required Images
 
-1. **hero-bg.jpg** - Background image for the hero section (1920x1080 recommended)
-2. **perfume1.jpg** - Product image for "Classic Elegance" (400x400 recommended)
+1. **urdiMadinaLogo.jpeg** - Brand logo for navigation and hero section ✅ (Already added)
+2. **image.png** - Background image for the hero section ✅ (Already added)
+3. **perfume1.jpg** - Product image for "Classic Elegance" (400x400 recommended)
 3. **perfume2.jpg** - Product image for "Modern Muse" (400x400 recommended)
 4. **perfume3.jpg** - Product image for "Midnight Mystery" (400x400 recommended)
 5. **perfume4.jpg** - Product image for "Fresh Breeze" (400x400 recommended)
