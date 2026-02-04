@@ -18,7 +18,7 @@ document.querySelectorAll('.nav-menu a').forEach(link => {
 // WhatsApp Booking Function
 function bookConsultation(productName = '') {
     // Replace this phone number with your actual WhatsApp business number
-    const phoneNumber = '1234567890'; // Format: country code + phone number (no + or spaces)
+    const phoneNumber = '+2347041051501'; // Format: country code + phone number (no + or spaces)
     
     let message;
     if (productName) {
@@ -104,7 +104,7 @@ Phone: ${phone}
 Message: ${message}`;
     
     // Send via WhatsApp
-    const phoneNumber = '1234567890'; // Replace with your WhatsApp business number
+    const phoneNumber = '+2347041051501'; // Replace with your WhatsApp business number
     const encodedMessage = encodeURIComponent(whatsappMessage);
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
     
@@ -206,4 +206,5 @@ style.textContent = `
         }
     }
 `;
+
 document.head.appendChild(style);
