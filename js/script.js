@@ -114,7 +114,7 @@ Message: ${message}`;
     this.reset();
     
     // Show success message
-    alert('Thank you for your message! We will redirect you to WhatsApp to complete your inquiry.');
+    alert('Thank you for your message! You Will be Contacted Shortly!.');
 });
 
 // Loading animation for images
@@ -208,3 +208,4 @@ style.textContent = `
 `;
 
 document.head.appendChild(style);
+
