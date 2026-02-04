@@ -89,33 +89,45 @@ document.addEventListener('DOMContentLoaded', () => {
 document.getElementById('contactForm').addEventListener('submit', function(e) {
     e.preventDefault();
     
-    // Get form data
+    // 1. Collect Form Data
     const formData = new FormData(this);
-    const name = formData.get('name') || this.querySelector('input[type="text"]').value;
-    const email = formData.get('email') || this.querySelector('input[type="email"]').value;
-    const phone = formData.get('phone') || this.querySelector('input[type="tel"]').value;
-    const message = formData.get('message') || this.querySelector('textarea').value;
-    
-    // Create WhatsApp message
-    const whatsappMessage = `New Contact Form Submission:
-Name: ${name}
-Email: ${email}
-Phone: ${phone}
-Message: ${message}`;
-    
-    // Send via WhatsApp
-    const phoneNumber = '+2347041051501'; // Replace with your WhatsApp business number
-    const encodedMessage = encodeURIComponent(whatsappMessage);
-    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-    
-    window.open(whatsappURL, '_blank');
-    
-    // Reset form
-    this.reset();
-    
-    // Show success message
-    alert('Thank you for your message! You Will be Contacted Shortly!.');
+    const templateParams = {
+        name: formData.get('name') || this.querySelector('input[type="text"]').value,
+        email: formData.get('email') || this.querySelector('input[type="email"]').value,
+        phone: formData.get('phone') || this.querySelector('input[type="tel"]').value,
+        message: formData.get('message') || this.querySelector('textarea').value
+    };
+
+    // 2. Prepare EmailJS Payload
+    const data = {
+        service_id: 'service_g5bk66l',
+        template_id: 'template_68l65mc',
+        user_id: 'y3UpOnyRk45iXKm5B', // Replace with your Public Key
+        template_params: templateParams
+    };
+
+    // 3. Send via REST API
+    fetch('https://api.emailjs.com/api/v1.0/email/send', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    .then((response) => {
+        if (response.ok) {
+            alert('Thank you! Your message has been sent successfully.');
+            this.reset();
+        } else {
+            return response.text().then(text => { throw new Error(text) });
+        }
+    })
+    .catch((error) => {
+        console.error('EmailJS Error:', error);
+        alert('Oops! Something went wrong. Please try again later.');
+    });
 });
+
 
 // Loading animation for images
 document.addEventListener('DOMContentLoaded', () => {
@@ -208,4 +220,5 @@ style.textContent = `
 `;
 
 document.head.appendChild(style);
+
 
